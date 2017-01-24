@@ -43,7 +43,7 @@ if(appEnv.isLocal){
 // Connect to MongoDB Service on Bluemix
 else if(!appEnv.isLocal) {
     var env = JSON.parse(process.env.VCAP_SERVICES),
-        mongoURL = env['mongodb'][0]['credentials']['url'];
+        mongoURL = "mongo --ssl --sslAllowInvalidCertificates sl-us-dal-9-portal.2.dblayer.com:18837/admin  -u admin -p JSXOXSGFCPYGJNMR";
     mongoose.connect(mongoURL);
     sessionDB = mongoURL;
     console.log('Your MongoDB is running at ' + mongoURL);
