@@ -1,10 +1,10 @@
 ---
 applications:
-- name: mean
-  host: mean-${random-word}
+- name: Nodejs-MEAN-Stack-meanmss-544
+  host: Nodejs-MEAN-Stack-meanmss-544
   memory: 256M
   services:
-  - mean-mongo
+    - mean-mongo
   env:
     NODE_ENV: cloud-foundry
 declared-services:
